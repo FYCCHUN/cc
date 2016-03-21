@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="Zh-cn">
+	<head>
+    	<meta charset="utf-8"/>
+    	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,user-scalable=no" />
+    	<link rel="stylesheet" href="CSS/reset.css"/>
+		<link rel="stylesheet" href="CSS/style.css">
+		
+		<script>
+	        (function() {
+	            var _compatModel = document.compatMode === "CSS1Compat";
+	            var hdom = document.documentElement;
+	            function reset(){
+	                var w_W = _compatModel ? hdom.clientWidth : document.body.clientWidth;
+	                hdom.style.fontSize = w_W * 20 / 640 + "px";
+	                window.scrollTo(0,0);
+	            }
+	            document.addEventListener('DOMContentLoaded', function(){
+	                setTimeout(reset,0);
+	            });
+	            window.addEventListener('pageshow', function(){
+	                setTimeout(reset,100);
+	            });
+	            window.addEventListener('load', function(){
+	                setTimeout(reset,100);
+	            });
+	            window.addEventListener('resize', function(){
+	                setTimeout(reset,100);
+	            });
+	        })();
+        </script>
+		
+ 	</head>
+
+	<body>
+		<div id="wrapper">
+			<form name="login-form" class="login-form" action="" method="post">			
+				<div class="header">
+				<h1>Login Form</h1>
+				<span>Fill out the form below to login to my super awesome imaginary control panel.</span>
+				</div>
+			
+				<div class="content">
+				<input name="username" type="text" class="input username" placeholder="Username" />
+				<div class="user-icon"></div>
+				<input name="password" type="password" class="input password" placeholder="Password" />
+				<div class="pass-icon"></div>		
+				</div>
+
+				<div class="footer">
+				<input type="submit" name="submit" value="Login" class="button" />
+				<input type="submit" name="submit" value="Register" class="register" />
+				</div>		
+			</form>
+		</div>
+<div class="gradient"></div>		    
+	</body>
+</html>
+
